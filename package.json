@@ -1,0 +1,35 @@
+{
+  "name": "yc-iot-demo",
+  "version": "0.0.1",
+  "description": "IoT demo for seminar on Yonam Institute of Technology",
+  "author": {
+    "name": "Woong Jun",
+    "email": "woong.jun@gmail.com",
+    "url": "http://code.woong.org/"
+  },
+  "contributors": [],
+  "homepage": "https://github.com/mycoboco/yc-iot-demo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mycoboco/yc-iot-demo"
+  },
+  "bugs": {
+    "url": "https://github.com/mycoboco/yc-iot-demo/issues",
+    "email": "woong.jun@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.12.6"
+  },
+  "keywords": [
+    "yc",
+    "iot",
+    "seminar",
+    "demo"
+  ]
+}

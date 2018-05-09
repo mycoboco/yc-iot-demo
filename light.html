@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+<body>
+  <div id="log"></div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+  var socket = io();
+
+  window.addEventListener('devicelight', function (event) {
+    document.getElementById('log').innerHTML = event.value;
+    socket.emit('light', event.value);
+  });
+</script>
+</html>

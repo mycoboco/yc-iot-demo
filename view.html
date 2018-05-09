@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+  <div style="width:90%;height:90%;margin:auto;">
+    <canvas id="myChart"></canvas>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+  var myChart = new Chart('myChart', {
+    type: 'line',
+    data: {
+      labels: [],
+      datasets: [{ label: 'ambient light', data: [] }],
+    },
+    options: {
+      animation: false,
+      maintainAspectRatio: false,
+      scales: { yAxes: [{ ticks: { min: 0 } }] }
+    }
+  });
+
+  setInterval(function () {
+    $.getJSON('/data', function (data) {
+      myChart.data.labels = data.map(function (d) { return d.x });
+      myChart.data.datasets[0].data = data.map(function (d) { return d.y });
+      myChart.update();
+    })
+  }, 1000);
+</script>
+</html>
